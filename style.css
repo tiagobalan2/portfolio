@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Wellfleet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 
 * {
     margin: 0;
@@ -9,6 +11,9 @@
 .adaptativo {
     font-size: 2vw;
     color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
@@ -19,11 +24,26 @@ body {
 
 .container1 {
     background-color: black;
-    display: flex;
-    justify-content: space-between;
     margin-top: 1.2rem;
     margin-bottom: 1.0rem;
     width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container1 a{
+    color: grey;
+    text-decoration: none;
+    font-size: 1.6vw;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container1 a:hover{
+    color: white;
 }
 
 .nav {
