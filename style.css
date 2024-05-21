@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Wellfleet&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.adaptativo {
+    font-size: 2vw;
+    color: white;
+}
+
+body {
+    max-width: 90vw;
+    margin: auto;
+    background-color: black;
+}
+
+.container1 {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    margin-bottom: 1.0rem;
+    width: 90%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.nav a {
+    color: rgba(255, 255, 255, 0.492);
+    text-decoration: none;
+    font-size: 2.0vw;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 0.3s; /* Transição suave da cor do texto */
+}
+
+.nav a:hover {
+    color: white; /* Altera a cor do texto para branco ao passar o mouse */
+}
+
+.nav a:focus {
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+.container {
+    display: flex;
+    overflow-x: auto; /* Habilita o scroll horizontal */
+    white-space: nowrap; /* Impede quebra de linha */
+}
+
+.image-wrapper {
+    position: relative; /* Necessário para o posicionamento absoluto do texto */
+    display: inline-block;
+    margin: 5px;
+}
+
+.image-wrapper img {
+    flex: 0 0 auto; /* Impede as imagens de redimensionarem */
+    width: 250px; /* Define um tamanho fixo para as imagens */
+    height: 400px; /* Define um tamanho fixo para as imagens */
+    object-fit: cover; /* Mantém a proporção da imagem e cobre toda a área */
+    display: block; /* Remove espaço em branco abaixo da imagem */
+    filter: grayscale(100%); /* Aplica filtro preto e branco */
+    transition: filter 0.3s; /* Suaviza a transição de cor */
+}
+
+.image-wrapper img:hover {
+    filter: grayscale(0%); /* Remove o filtro preto e branco ao passar o mouse */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0; /* Alinha o texto na parte inferior da imagem */
+    left: 0;
+    font-size: 1.2rem;
+    width: 100%;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    opacity: 0; /* Torna o texto invisível inicialmente */
+    transition: opacity 0.3s; /* Suaviza a transição de visibilidade */
+    border-radius: 0 0 10px 10px;
+    font-family: arial;
+}
+
+.image-wrapper:hover .text-overlay {
+    opacity: 1; /* Torna o texto visível quando a imagem é "hovered" */
+}
+
+/* Personalização da barra de rolagem para navegadores WebKit (Chrome, Safari) */
+.container::-webkit-scrollbar {
+    height: 12px; /* Altura da barra de rolagem horizontal */
+}
+
+.container::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Cor do fundo da barra de rolagem */
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #6b6b6b, #d1d1d1); /* Cor da "thumb" da barra de rolagem com gradiente */
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #4b4b4b, #b1b1b1); /* Cor da "thumb" ao passar o mouse */
+}
+
+/* Personalização da barra de rolagem para Firefox */
+.container {
+    scrollbar-width: thin; /* Largura da barra de rolagem */
+    scrollbar-color: #6b6b6b #e0e0e0; /* Cor da "thumb" e do fundo da barra de rolagem */
+}
+
+/* Hover nos links */
+.nav a:hover {
+    color: white; /* Altera a cor do texto para branco ao passar o mouse sobre o link */
+}
