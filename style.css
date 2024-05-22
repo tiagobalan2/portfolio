@@ -159,11 +159,11 @@ body {
 
 .container-sobre-mim{
     width: 100%;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .h2-sobre-mim{
-    font-size: 2.0vw;
+    font-size: 1.7rem;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -179,7 +179,7 @@ body {
 }
 
 .container-pensamento-computacional{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .p-pensamento{
@@ -188,13 +188,16 @@ body {
 
 .h1-pensamento{
     color: orange;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.7rem;
 }
 
 .container4 {
     display: flex;
     flex-direction: row; /* Inicialmente em duas colunas */
     gap: 20px;
-    align-items: center;
 }
 
 .p-pensamento {
@@ -203,6 +206,7 @@ body {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin-top: 50px;
 }
 
 .img-pensamento {
