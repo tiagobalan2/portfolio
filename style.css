@@ -26,10 +26,11 @@ body {
     background-color: black;
     margin-top: 1.2rem;
     margin-bottom: 1.0rem;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-attachment: fixed;
 }
 
 
@@ -83,21 +84,25 @@ body {
 
 .image-wrapper img {
     flex: 0 0 auto; /* Impede as imagens de redimensionarem */
-    width: 250px; /* Define um tamanho fixo para as imagens */
-    height: 400px; /* Define um tamanho fixo para as imagens */
+    width: 260px; /* Define um tamanho fixo para as imagens */
+    height: 450px; /* Define um tamanho fixo para as imagens */
     object-fit: cover; /* Mantém a proporção da imagem e cobre toda a área */
     display: block; /* Remove espaço em branco abaixo da imagem */
     filter: grayscale(100%); /* Aplica filtro preto e branco */
     transition: filter 0.3s; /* Suaviza a transição de cor */
 }
 
-.image-wrapper img:hover {
+.image-wrapper img:hover,
+.image-wrapper:hover img,
+.image-wrapper .text-overlay:hover ~ img,
+.image-wrapper .text-overlay a:hover ~ img {
     filter: grayscale(0%); /* Remove o filtro preto e branco ao passar o mouse */
 }
 
+
 .text-overlay {
     position: absolute;
-    bottom: 0; /* Alinha o texto na parte inferior da imagem */
+    bottom: 200px; /* Alinha o texto na parte inferior da imagem */
     left: 0;
     font-size: 1.2rem;
     width: 100%;
@@ -108,6 +113,14 @@ body {
     transition: opacity 0.3s; /* Suaviza a transição de visibilidade */
     border-radius: 0 0 10px 10px;
     font-family: arial;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.link-site{
+    color: white;
+    text-decoration: none;
 }
 
 .image-wrapper:hover .text-overlay {
@@ -142,4 +155,76 @@ body {
 /* Hover nos links */
 .nav a:hover {
     color: white; /* Altera a cor do texto para branco ao passar o mouse sobre o link */
+}
+
+.container-sobre-mim{
+    width: 100%;
+    margin-top: 60px;
+}
+
+.h2-sobre-mim{
+    font-size: 2.0vw;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: orange;
+}
+
+.p-sobre-mim{
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+.container-pensamento-computacional{
+    margin-top: 20px;
+}
+
+.p-pensamento{
+    color: white;
+}
+
+.h1-pensamento{
+    color: orange;
+}
+
+.container4 {
+    display: flex;
+    flex-direction: row; /* Inicialmente em duas colunas */
+    gap: 20px;
+    align-items: center;
+}
+
+.p-pensamento {
+    flex: 1;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.img-pensamento {
+    flex: 1;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Media Query para tornar o layout em uma coluna */
+@media (max-width: 768px) {
+    .container4 {
+        flex-direction: column; /* Muda para uma coluna */
+    }
+
+    .p-pensamento, .img-pensamento {
+        flex: none; /* Remove a flexibilidade */
+        width: 100%; /* Ocupa a largura total */
+    }
+
+    .img-pensamento {
+        margin-top: 20px;
+    }
 }
