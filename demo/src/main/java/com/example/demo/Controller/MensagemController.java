@@ -24,7 +24,7 @@ public class MensagemController {
 
     //CRIA UM USUARIO NOVO
     @CrossOrigin(origins = "*")
-    @PostMapping("/cadastro")
+    @PostMapping
     public ResponseEntity<Mensagem> criarUsuario(@Valid @RequestBody Mensagem mensagem) {
         return ResponseEntity.status(201).body(mensagemService.criarMensagem(mensagem));
     }

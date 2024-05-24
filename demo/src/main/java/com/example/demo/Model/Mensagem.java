@@ -16,18 +16,17 @@ public class Mensagem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_mensagem")
+    @Column(name = "id")
     private long id;
 
-    @Column(name = "nome_pessoa")
-    private String nomePessoa;
+    @Column(name = "nome")
+    private String nome;
 
-    @Column(name = "email_pessoa")
-    private String emailPessoa;
+    @Column(name = "email")
+    private String email;
 
-    @NotBlank(message = "preencha a mensagem")
-    @Column(name = "corpo_mensagem")
-    private String corpoMensagem;
+    @Column(name = "mensagem")
+    private String mensagem;
 
 
 }

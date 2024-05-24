@@ -373,3 +373,46 @@ body {
 .p-projeto-facul{
     color: white;
 }
+
+.h1-span-msg{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.container-formulario{
+    margin-top: 40px;
+
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.input-nome{
+    width: 100%;
+    height: 20%;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.input-mensagem{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    height: 200px;
+}
+
+.btn-enviar-form{
+    margin-top: 10px;
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    font-size: 1.3rem;
+}
